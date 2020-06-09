@@ -16,8 +16,13 @@ You can either run the code on python 3.6 or on the kaggle kernel GPU.
 
   
 ## Usage
-Run the files in the following order:
-1. **preprocess_human36.py** contains all the libraries to be imported initially. 
+The usage of the following python files is given as follows:
+* **preprocess_human36.py** contains all functions for preprocessing the Human 3.6M dataset. 
+* **preprocess_ntu.py** contains all functions for preprocessing the NTURGB-D dataset. 
+* **train.py** is used for training the model. Here, the bidirectional GAN has been used with the frame-wise geodesic loss along with recursive  prediction strategy to avoid mode-collapse and to further regularize the training.
+* The **bodyjoints_to_array.py** file uses the SequenceBodyReader class which prepares a batch of sequence of bodies for each clip and other functions such as next_minibatch() to give a mini batch of sequences and their ground truth, select_frames() to fixed sequence length from the provided clip, and from_body_to_feature() to converty body joints to a numpy array and apply the needed normalization.
+* The **gan_neural_network.py** file contains the main neural network whereas the files **human36_poses.py** and **ntu_poses.py** have functions which are used to read and parse the Human3.6M and NTURGB-D skeleton files. 
+
 
 ## Dataset
 I have used the 3D skeleton data from NTU-RGBD and Human 3.6m dataset to train HP-GAN:
@@ -27,8 +32,23 @@ Human 3.6m: http://vision.imar.ro/human3.6m/description.php <br>
 For Human 3.6m, the h5 format and parsing code is obtained from https://github.com/una-dinosauria/3d-pose-baseline
 
 ## Results
-![eating](https://github.com/abhishek-924/GAN-Poser/blob/master/img/eating.png)
+Sample output for the eating pose <br>
+<img src= "https://github.com/abhishek-924/GAN-Poser/blob/master/img/eating.png" width="20%" height= "20%">
+<br><br>
+Sample output for the walking pose <br>
+<img src= "https://github.com/abhishek-924/GAN-Poser/blob/master/img/walking.png" width="20%" height= "20%">
  
 ## Citation
-If you're using theis repository or the publication for your research, kindly cite the following 
+If you're using this repository or my publication for your research, kindly cite the following:
+
+```
+@article{jain2020gan,
+  title={GAN-Poser: an improvised bidirectional GAN model for human motion prediction},
+  author={Jain, Deepak Kumar and Zareapoor, Masoumeh and Jain, Rachna and Kathuria, Abhishek and Bachhety, Shivam},
+  journal={Neural Computing and Applications},
+  pages={1--13},
+  year={2020},
+  publisher={Springer},
+}
+```
 
