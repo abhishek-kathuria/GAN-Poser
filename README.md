@@ -11,7 +11,7 @@ My research paper on titled [**GAN-Poser: An Improvised Bidirectional GAN Model 
 ## Requirements
 * Anaconda
 * Tensorflow 1.8 <br>
-* h5py
+* h5py <br>
 You can either run the code on python 3.6 or on the kaggle kernel GPU.
 
   
