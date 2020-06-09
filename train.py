@@ -12,13 +12,9 @@ import h5py
 
 import pandas as pd
 import tensorflow as tf
-
-import gan_neural_net as gan_nn
-from braniac.format import SourceFactory
-from braniac.utils import DataPreprocessing, NormalizationMode
-from braniac.viz import Skeleton2D
-from braniac.readers.body import SequenceBodyReader
-from braniac.models.body import RNNDiscriminator, NNDiscriminator, SequenceToSequenceGenerator
+import gan_nnn_neural_net as gan_nn
+from bodyjoints_to_array import SequenceBodyReader
+from bodyjoints_to_array import RNNDiscriminator, NNDiscriminator, SequenceToSequenceGenerator
 
 
 #the main function to train the GAN model 
