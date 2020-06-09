@@ -27,7 +27,7 @@ Human 3.6m: http://vision.imar.ro/human3.6m/description.php <br>
 For Human 3.6m, the h5 format and parsing code is obtained from https://github.com/una-dinosauria/3d-pose-baseline
 
 ## Results
-![eating](http://url/to/img.png)
+![eating](https://github.com/abhishek-924/GAN-Poser/blob/master/img/eating.png)
  
 ## Citation
 If you're using theis repository or the publication for your research, kindly cite the following 
